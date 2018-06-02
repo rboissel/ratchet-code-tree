@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8D4F7CE-B371-4E74-B4BD-03F824654DB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ratchet_code_tree</RootNamespace>
+    <AssemblyName>ratchet-code-tree</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Emitter.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Nodes\Add.cs" />
+    <Compile Include="Nodes\And.cs" />
+    <Compile Include="Nodes\Box.cs" />
+    <Compile Include="Nodes\Branch.cs" />
+    <Compile Include="Nodes\Branch_Always.cs" />
+    <Compile Include="Nodes\Branch_IfEqual.cs" />
+    <Compile Include="Nodes\Branch_IfFalse.cs" />
+    <Compile Include="Nodes\Branch_IfGreater.cs" />
+    <Compile Include="Nodes\Branch_IfGreaterOrEqual.cs" />
+    <Compile Include="Nodes\Branch_IfLower.cs" />
+    <Compile Include="Nodes\Branch_IfLowerOrEqual.cs" />
+    <Compile Include="Nodes\Branch_IfNotEqual.cs" />
+    <Compile Include="Nodes\Branch_IfTrue.cs" />
+    <Compile Include="Nodes\Call_Function.cs" />
+    <Compile Include="Nodes\Call_Procedure.cs" />
+    <Compile Include="Nodes\CatchObject.cs" />
+    <Compile Include="Nodes\Ceq.cs" />
+    <Compile Include="Nodes\Cgt.cs" />
+    <Compile Include="Nodes\Cgt_Un.cs" />
+    <Compile Include="Nodes\Clt.cs" />
+    <Compile Include="Nodes\Clt_Un.cs" />
+    <Compile Include="Nodes\ConvI.cs" />
+    <Compile Include="Nodes\ConvI1.cs" />
+    <Compile Include="Nodes\ConvI2.cs" />
+    <Compile Include="Nodes\ConvI4.cs" />
+    <Compile Include="Nodes\ConvI8.cs" />
+    <Compile Include="Nodes\ConvR8.cs" />
+    <Compile Include="Nodes\ConvU.cs" />
+    <Compile Include="Nodes\ConvU1.cs" />
+    <Compile Include="Nodes\ConvU2.cs" />
+    <Compile Include="Nodes\DeclLoc.cs" />
+    <Compile Include="Nodes\Div.cs" />
+    <Compile Include="Nodes\Div_Un.cs" />
+    <Compile Include="Nodes\GetFtn.cs" />
+    <Compile Include="Nodes\If.cs" />
+    <Compile Include="Nodes\InitArray.cs" />
+    <Compile Include="Nodes\InitObj.cs" />
+    <Compile Include="Nodes\IsInst.cs" />
+    <Compile Include="Nodes\LdArg.cs" />
+    <Compile Include="Nodes\LdArga.cs" />
+    <Compile Include="Nodes\LdArray.cs" />
+    <Compile Include="Nodes\LdcI4.cs" />
+    <Compile Include="Nodes\LdcR4.cs" />
+    <Compile Include="Nodes\LdcR8.cs" />
+    <Compile Include="Nodes\LdElem.cs" />
+    <Compile Include="Nodes\LdElema.cs" />
+    <Compile Include="Nodes\LdElemI4.cs" />
+    <Compile Include="Nodes\LdElemR4.cs" />
+    <Compile Include="Nodes\LdElemRef.cs" />
+    <Compile Include="Nodes\LdFld.cs" />
+    <Compile Include="Nodes\LdFldInfo.cs" />
+    <Compile Include="Nodes\LdFnt.cs" />
+    <Compile Include="Nodes\LdindI1.cs" />
+    <Compile Include="Nodes\LdindI4.cs" />
+    <Compile Include="Nodes\LdindR4.cs" />
+    <Compile Include="Nodes\LdindU2.cs" />
+    <Compile Include="Nodes\LdindU4.cs" />
+    <Compile Include="Nodes\LdLen.cs" />
+    <Compile Include="Nodes\LdLoc.cs" />
+    <Compile Include="Nodes\LdLoca.cs" />
+    <Compile Include="Nodes\LdNull.cs" />
+    <Compile Include="Nodes\LdStr.cs" />
+    <Compile Include="Nodes\LdType.cs" />
+    <Compile Include="Nodes\Leave.cs" />
+    <Compile Include="Nodes\Mul.cs" />
+    <Compile Include="Nodes\MulOvf.cs" />
+    <Compile Include="Nodes\Neg.cs" />
+    <Compile Include="Nodes\Newarr.cs" />
+    <Compile Include="Nodes\Newobj.cs" />
+    <Compile Include="Nodes\Nop.cs" />
+    <Compile Include="Nodes\Not.cs" />
+    <Compile Include="Nodes\Rem.cs" />
+    <Compile Include="Nodes\Shr_Un.cs" />
+    <Compile Include="Nodes\Or.cs" />
+    <Compile Include="Nodes\Ret.cs" />
+    <Compile Include="Nodes\Shl.cs" />
+    <Compile Include="Nodes\StArg.cs" />
+    <Compile Include="Nodes\StElem.cs" />
+    <Compile Include="Nodes\StElemRef.cs" />
+    <Compile Include="Nodes\StFld.cs" />
+    <Compile Include="Nodes\StIndI1.cs" />
+    <Compile Include="Nodes\StIndI2.cs" />
+    <Compile Include="Nodes\StIndI4.cs" />
+    <Compile Include="Nodes\StIndI8.cs" />
+    <Compile Include="Nodes\StIndR4.cs" />
+    <Compile Include="Nodes\StIndR8.cs" />
+    <Compile Include="Nodes\StLoc.cs" />
+    <Compile Include="Nodes\Sub.cs" />
+    <Compile Include="Nodes\Throw.cs" />
+    <Compile Include="Nodes\Try.cs" />
+    <Compile Include="Nodes\Unbox.cs" />
+    <Compile Include="Nodes\While.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Nodes\Statement.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
