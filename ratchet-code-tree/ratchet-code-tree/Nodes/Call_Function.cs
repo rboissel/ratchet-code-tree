@@ -25,10 +25,17 @@ namespace Ratchet.Code.Tree.Nodes
             if (Method is LdFtn)
             {
                 System.Reflection.MethodBase methodBase = (Method as LdFtn).MethodBase;
-                if (methodBase.IsConstructor) { _Type = methodBase.DeclaringType; }
-                else if (methodBase is System.Reflection.MethodInfo)
+                if (methodBase != null)
                 {
-                    _Type = (methodBase as System.Reflection.MethodInfo).ReflectedType;
+                    if (methodBase.IsConstructor) { _Type = methodBase.DeclaringType; }
+                    else if (methodBase is System.Reflection.MethodInfo)
+                    {
+                        _Type = (methodBase as System.Reflection.MethodInfo).ReflectedType;
+                    }
+                }
+                else
+                {
+                    _Type = (Method as LdFtn).Type;
                 }
             }
         }

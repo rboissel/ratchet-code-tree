@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ratchet-code-tree", "ratchet-code-tree\ratchet-code-tree.csproj", "{B8D4F7CE-B371-4E74-B4BD-03F824654DB2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{30110FDB-D6A4-4A60-BACE-FAD42B1F5295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ratchet-code-tree-net40", "Build\ratchet-code-tree-net40\ratchet-code-tree-net40.csproj", "{F306D329-2AFE-411C-B34F-C2EF508220FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,18 @@ Global
 		{B8D4F7CE-B371-4E74-B4BD-03F824654DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D4F7CE-B371-4E74-B4BD-03F824654DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8D4F7CE-B371-4E74-B4BD-03F824654DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F306D329-2AFE-411C-B34F-C2EF508220FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F306D329-2AFE-411C-B34F-C2EF508220FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F306D329-2AFE-411C-B34F-C2EF508220FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F306D329-2AFE-411C-B34F-C2EF508220FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F306D329-2AFE-411C-B34F-C2EF508220FD} = {30110FDB-D6A4-4A60-BACE-FAD42B1F5295}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A61EA646-C3AB-4F6C-AEFD-2F56BFB9B3BA}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3A34D5E-1F1E-4178-84DB-5210EE3ED198}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ratchet_code_tree</RootNamespace>
+    <AssemblyName>ratchet-code-tree</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\ratchet-msf\lib\net40\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\ratchet-msf\lib\net40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\ratchet-code-tree\Emitter.cs">
+      <Link>Emitter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Node.cs">
+      <Link>Node.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Add.cs">
+      <Link>Nodes\Add.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\And.cs">
+      <Link>Nodes\And.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Box.cs">
+      <Link>Nodes\Box.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch.cs">
+      <Link>Nodes\Branch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_Always.cs">
+      <Link>Nodes\Branch_Always.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_IfEqual.cs">
+      <Link>Nodes\Branch_IfEqual.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_IfFalse.cs">
+      <Link>Nodes\Branch_IfFalse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_IfGreater.cs">
+      <Link>Nodes\Branch_IfGreater.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_IfGreaterOrEqual.cs">
+      <Link>Nodes\Branch_IfGreaterOrEqual.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_IfLower.cs">
+      <Link>Nodes\Branch_IfLower.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_IfLowerOrEqual.cs">
+      <Link>Nodes\Branch_IfLowerOrEqual.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_IfNotEqual.cs">
+      <Link>Nodes\Branch_IfNotEqual.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Branch_IfTrue.cs">
+      <Link>Nodes\Branch_IfTrue.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Call_Function.cs">
+      <Link>Nodes\Call_Function.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Call_Procedure.cs">
+      <Link>Nodes\Call_Procedure.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\CatchObject.cs">
+      <Link>Nodes\CatchObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Ceq.cs">
+      <Link>Nodes\Ceq.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Cgt.cs">
+      <Link>Nodes\Cgt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Cgt_Un.cs">
+      <Link>Nodes\Cgt_Un.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Clt.cs">
+      <Link>Nodes\Clt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Clt_Un.cs">
+      <Link>Nodes\Clt_Un.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvI.cs">
+      <Link>Nodes\ConvI.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvI1.cs">
+      <Link>Nodes\ConvI1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvI2.cs">
+      <Link>Nodes\ConvI2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvI4.cs">
+      <Link>Nodes\ConvI4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvI8.cs">
+      <Link>Nodes\ConvI8.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvR8.cs">
+      <Link>Nodes\ConvR8.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvU.cs">
+      <Link>Nodes\ConvU.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvU1.cs">
+      <Link>Nodes\ConvU1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\ConvU2.cs">
+      <Link>Nodes\ConvU2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\DeclFunc.cs">
+      <Link>Nodes\DeclFunc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\DeclLoc.cs">
+      <Link>Nodes\DeclLoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Div.cs">
+      <Link>Nodes\Div.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Div_Un.cs">
+      <Link>Nodes\Div_Un.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\GetFtn.cs">
+      <Link>Nodes\GetFtn.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\If.cs">
+      <Link>Nodes\If.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\InitArray.cs">
+      <Link>Nodes\InitArray.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\InitObj.cs">
+      <Link>Nodes\InitObj.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\IsInst.cs">
+      <Link>Nodes\IsInst.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdArg.cs">
+      <Link>Nodes\LdArg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdArga.cs">
+      <Link>Nodes\LdArga.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdArray.cs">
+      <Link>Nodes\LdArray.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdcI4.cs">
+      <Link>Nodes\LdcI4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdcR4.cs">
+      <Link>Nodes\LdcR4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdcR8.cs">
+      <Link>Nodes\LdcR8.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdElem.cs">
+      <Link>Nodes\LdElem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdElema.cs">
+      <Link>Nodes\LdElema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdElemI4.cs">
+      <Link>Nodes\LdElemI4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdElemR4.cs">
+      <Link>Nodes\LdElemR4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdElemRef.cs">
+      <Link>Nodes\LdElemRef.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdFld.cs">
+      <Link>Nodes\LdFld.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdFldInfo.cs">
+      <Link>Nodes\LdFldInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdFnt.cs">
+      <Link>Nodes\LdFnt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdindI1.cs">
+      <Link>Nodes\LdindI1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdindI4.cs">
+      <Link>Nodes\LdindI4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdindR4.cs">
+      <Link>Nodes\LdindR4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdindU2.cs">
+      <Link>Nodes\LdindU2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdindU4.cs">
+      <Link>Nodes\LdindU4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdLen.cs">
+      <Link>Nodes\LdLen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdLoc.cs">
+      <Link>Nodes\LdLoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdLoca.cs">
+      <Link>Nodes\LdLoca.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdNull.cs">
+      <Link>Nodes\LdNull.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdStr.cs">
+      <Link>Nodes\LdStr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\LdType.cs">
+      <Link>Nodes\LdType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Leave.cs">
+      <Link>Nodes\Leave.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Mul.cs">
+      <Link>Nodes\Mul.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\MulOvf.cs">
+      <Link>Nodes\MulOvf.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Neg.cs">
+      <Link>Nodes\Neg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Newarr.cs">
+      <Link>Nodes\Newarr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Newobj.cs">
+      <Link>Nodes\Newobj.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Nop.cs">
+      <Link>Nodes\Nop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Not.cs">
+      <Link>Nodes\Not.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Or.cs">
+      <Link>Nodes\Or.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Rem.cs">
+      <Link>Nodes\Rem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Ret.cs">
+      <Link>Nodes\Ret.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Shl.cs">
+      <Link>Nodes\Shl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Shr_Un.cs">
+      <Link>Nodes\Shr_Un.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StArg.cs">
+      <Link>Nodes\StArg.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Statement.cs">
+      <Link>Nodes\Statement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StElem.cs">
+      <Link>Nodes\StElem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StElemRef.cs">
+      <Link>Nodes\StElemRef.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StFld.cs">
+      <Link>Nodes\StFld.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StIndI1.cs">
+      <Link>Nodes\StIndI1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StIndI2.cs">
+      <Link>Nodes\StIndI2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StIndI4.cs">
+      <Link>Nodes\StIndI4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StIndI8.cs">
+      <Link>Nodes\StIndI8.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StIndR4.cs">
+      <Link>Nodes\StIndR4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StIndR8.cs">
+      <Link>Nodes\StIndR8.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\StLoc.cs">
+      <Link>Nodes\StLoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Sub.cs">
+      <Link>Nodes\Sub.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Throw.cs">
+      <Link>Nodes\Throw.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Try.cs">
+      <Link>Nodes\Try.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\Unbox.cs">
+      <Link>Nodes\Unbox.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ratchet-code-tree\Nodes\While.cs">
+      <Link>Nodes\While.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

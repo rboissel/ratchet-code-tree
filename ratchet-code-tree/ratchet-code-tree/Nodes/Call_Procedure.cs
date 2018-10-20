@@ -14,12 +14,30 @@ namespace Ratchet.Code.Tree.Nodes
         public Node Method { get { return _Method; } }
         Node _This;
         public Node This { get { return _This; } }
+        Type _Type;
+        public override Type Type { get { return _Type; } }
 
         public Call_Procedure(Node Method, Node This, Node[] Parameters)
         {
             _Parameters = Parameters;
             _Method = Method;
             _This = This;
+            if (Method is LdFtn)
+            {
+                System.Reflection.MethodBase methodBase = (Method as LdFtn).MethodBase;
+                if (methodBase != null)
+                {
+                    if (methodBase.IsConstructor) { _Type = methodBase.DeclaringType; }
+                    else if (methodBase is System.Reflection.MethodInfo)
+                    {
+                        _Type = (methodBase as System.Reflection.MethodInfo).ReflectedType;
+                    }
+                }
+                else
+                {
+                    _Type = (_Method as LdFtn).Type;
+                }
+            }
         }
 
         internal override void Inspect(Inspector Inspector) { Inspector.InspectCall_Procedure(this); }

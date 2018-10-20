@@ -8,7 +8,7 @@ namespace Ratchet.Code.Tree
 {
     public abstract class Inspector
     {
-        public virtual void Inspect(Node Node) { Node.Inspect(this); }
+        public virtual void Inspect(Node Node) { if (Node != null) { Node.Inspect(this); } }
         public virtual void InspectAdd(Nodes.Add Add) { Inspect(Add.Left); Inspect(Add.Right); }
         public virtual void InspectAnd(Nodes.And And) { Inspect(And.Left); Inspect(And.Right); }
         public virtual void InspectBox(Nodes.Box Box) { }
@@ -29,6 +29,7 @@ namespace Ratchet.Code.Tree
         public virtual void InspectConvI4(Nodes.ConvI4 ConvI4) { Inspect(ConvI4.Value); }
         public virtual void InspectConvI8(Nodes.ConvI8 ConvI8) { Inspect(ConvI8.Value); }
         public virtual void InspectConvR8(Nodes.ConvR8 ConvR8) { Inspect(ConvR8.Value); }
+        public virtual void InspectDeclFunc(Nodes.DeclFunc DeclFunc) { for (int n = 0; n < DeclFunc.Statements.Length; n++) { Inspect(DeclFunc.Statements[n]); } }
         public virtual void InspectDeclLoc(Nodes.DeclLoc DeclLoc) { }
         public virtual void InspectDiv(Nodes.Div Div) { Inspect(Div.Left); Inspect(Div.Right); }
         public virtual void InspectDiv_Un(Nodes.Div_Un Div) { Inspect(Div.Left); Inspect(Div.Right); }

@@ -72,6 +72,7 @@
     <Compile Include="Nodes\ConvU.cs" />
     <Compile Include="Nodes\ConvU1.cs" />
     <Compile Include="Nodes\ConvU2.cs" />
+    <Compile Include="Nodes\DeclFunc.cs" />
     <Compile Include="Nodes\DeclLoc.cs" />
     <Compile Include="Nodes\Div.cs" />
     <Compile Include="Nodes\Div_Un.cs" />
